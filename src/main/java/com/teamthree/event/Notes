@@ -1,0 +1,15 @@
+1) Relatie User-Ticket (OnetoMany sau OnetoOne?)?
+2) Enumurile trebuie salvate in DB? Cum se salveaza?
+3) Event startTime String vs something special (like Date)?
+
+//use OffsetDateTime, LocalDateTime
+
+4) Cand si cum creem baza de date?
+
+
+TODO
+1. Date to rewrite into LocalDate (in User and Event; check the effect on SQL table if any)
+2. getAllEvents (or with filter)
+3. get tickets bought by a Customer
+4. buy ticket
+5. user log in ...
