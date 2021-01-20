@@ -58,6 +58,8 @@ public class TicketServiceImpl implements TicketService {
         ticket.setUser(userToSave);
 
         ticketRepository.save(ticket);
+
+        updateSoldTicketNumber(ticketInsertDto.getEventId());
     }
 
     @Override
@@ -70,5 +72,12 @@ public class TicketServiceImpl implements TicketService {
             ticketList.add(ticketViewDto);
         }
         return ticketList;
+    }
+
+    public void updateSoldTicketNumber (long eventId) {
+
+        Event event = eventRepository.findById(eventId);
+        event.setSoldTicketNumber(event.getSoldTicketNumber() + 1);
+        eventRepository.save(event);
     }
 }

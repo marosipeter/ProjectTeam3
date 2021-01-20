@@ -17,9 +17,14 @@ public class EventViewDto {
     private Address address;
     private LocalDateTime date;
     private EventType eventType;
+    private Double ticketPrice;
 
 
-    public EventType getEventType() {
+    /*public EventType getEventType() {
         return eventType;
-    }
+    }*/
+
+    /*public Double getEventPrice() {
+        return ticketPrice;
+    }*/
 }
